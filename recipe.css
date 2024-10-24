@@ -1,0 +1,170 @@
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #fff7ed, #fff3e0);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .recipe-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .recipe-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .recipe-title {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .recipe-meta {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Error message styling */
+        .error-message {
+            text-align: center;
+            color: red;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        /* Modal styles */
+        #recipe-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            border-radius: 15px;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        #recipe-modal.show {
+            display: block;
+        }
+
+        #recipe-modal .close-btn {
+            float: right;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            color: #888;
+            transition: color 0.3s;
+        }
+
+        #recipe-modal .close-btn:hover {
+            color: #ff6b6b;
+        }
+
+        #modal-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #modal-title {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 5px;
+        }
+
+        #modal-instructions {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #modal-ingredients {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        #modal-ingredients li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eaeaea;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .backdrop.show {
+            display: block;
+        }
+   

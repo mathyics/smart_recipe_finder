@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="1" x2="6" y2="4"></line>
+                    <line x1="10" y1="1" x2="10" y2="4"></line>
+                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+                Smart Recipe
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="recipe.html">Recipes</a></li>
+                    <li><a href="#">Meal Planner</a></li>
+                    <li><a href="#">Favorites</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="ingredient-section">
+            <h2>What's in your kitchen?</h2>
+            <div class="input-container">
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input id="ingredient-input" type="text" placeholder="Enter an ingredient" />
+                </div>
+                <button class="add-btn" onclick="addIngredient()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add
+                </button>
+            </div>
+            <div id="ingredients-list" class="ingredients-list"></div>
+        </section>
+
+        <section>
+            <h2>Matching Recipes</h2>
+            <div id="recipe-grid" class="recipe-grid"></div>
+        </section>
+    </main>
+
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title" class="modal-title"></h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Recipe Image" />
+                <p id="modal-instructions"></p>
+                <div class="ingredient-list" id="modal-ingredients"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js">
+        
+    </script>
+</body>
+</html>

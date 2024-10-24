@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recipes</title>
+    <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>All Recipes</h1>
+
+        <div id="recipe-grid"></div>
+    </div>
+
+    <div class="backdrop" id="backdrop" onclick="closeModal()"></div>
+    <div id="recipe-modal">
+        <span class="close-btn" onclick="closeModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" alt="img"/>
+        <h3>Instructions</h3>
+        <p id="modal-instructions"></p>
+        <h3>Ingredients</h3>
+        <ul id="modal-ingredients"></ul>
+    </div>
+
+    <script src="recipe.js">
+        
+
+    </script>
+</body>
+</html>
